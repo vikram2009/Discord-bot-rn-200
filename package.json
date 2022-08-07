@@ -1,0 +1,13 @@
+{
+  "name": "Discord-bot-rn-200",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "repository": "https://github.com/vikram2009/Discord-bot-rn-200.git",
+  "author": "vikram2009 <vikramksm@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.1.2",
+    "dotenv": "^16.0.1"
+  }
+}
