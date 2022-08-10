@@ -56,6 +56,7 @@ client.on('interactionCreate', async interaction => {
 
 	if (interaction.commandName === 'help') {
 		await interaction.reply({ content: 'Coming Soon... Text My Friend <@998563525842698311>' });
+		await interaction.user.send("Hey")
 	}
 });
 
