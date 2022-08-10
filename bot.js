@@ -66,16 +66,8 @@ client.on('interactionCreate', async interaction => {
 
 	if (interaction.commandName === 'roles') {
 		await interaction.reply({content: 'Check ur Dm' ,ephemeral: true });
-		await interaction.user.send("WE WILL REACH BACK TO YOU SOON...")
+		await interaction.user.send("type $roles in the server")
 		
-	client.users.fetch('944866831427063808').then((user) => {
-            try {
-                user.send(`<@${interaction.user.id}> asked for a role`);	
-            } catch (err){
-                console.log("err");
-            }
-        
-	})
 	}
 });
 
