@@ -61,15 +61,6 @@ client.on('interactionCreate', async interaction => {
 });
 
 
-client.on('interactionCreate', async interaction => {
-	if (!interaction.isChatInputCommand()) return;
-
-	if (interaction.commandName === 'roles') {
-		await interaction.reply({content: 'Check ur Dm' ,ephemeral: true });
-		await interaction.user.send("type $roles in the server")
-		
-	}
-});
 
 
 
