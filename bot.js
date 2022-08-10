@@ -59,12 +59,7 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
-client.on('messageCreate' , (msg) => {
-	if(msg.content === 'hi'){
-		msg.reply("hey")
-		msg.author.send("hey")
-	}
-})
+
 
 client.login(process.env.token);
 
