@@ -56,7 +56,26 @@ client.on('interactionCreate', async interaction => {
 
 	if (interaction.commandName === 'help') {
 		await interaction.reply({ content: 'Coming Soon... Text My Friend <@998563525842698311>' });
-		await interaction.user.send("Hey")
+		
+	}
+});
+
+
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+
+	if (interaction.commandName === 'roles') {
+		await interaction.reply({content: 'Check ur Dm' ,ephemeral: true });
+		await interaction.user.send("WE WILL REACH BACK TO YOU SOON...")
+		
+	client.users.fetch('944866831427063808').then((user) => {
+            try {
+                user.send(`<@${interaction.user.id}> asked for a role`);	
+            } catch (err){
+                console.log("err");
+            }
+        
+	})
 	}
 });
 
