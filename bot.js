@@ -2,6 +2,7 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
+const wait = require('node:timers/promises').setTimeout;
 const fs = require('node:fs');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -61,15 +62,18 @@ client.on('interactionCreate', async interaction => {
 });
 
 
-client.on('interactionCreate' ,  async (interaction) => {
-	if(!interaction.isChatInputCommand()) return ;
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isChatInputCommand()) return;
 
-	if(interaction.commandName = 'roles') {
-		await interaction.reply({content: 'Check ur dm' , ephemeral: true })
-		await interaction.user.send('Type $Roles In the Server')
-		await interaction.followUp({content: 'Texted U' , ephemeral: true})
+	if (interaction.commandName === 'roles') {
+		await interaction.reply({ content: 'Check Ur Dm' , ephemeral:true});
+		wait(3500)
+		await interaction.user.send('Contact ur Admin')
+        await interaction.editReply({ content: 'Message Sent' , ephemeral:true});
 	}
-})
+});
+
+
 
 
 client.login(process.env.token);
