@@ -1,4 +1,4 @@
-const {SlashCommandBuilder} = require('discord.js')
+const {SlashCommandBuilder , PermissionFlagsBits} = require('discord.js')
 
 module.exports = {
 
@@ -6,5 +6,5 @@ module.exports = {
       .setName('roles')
       .setDescription('ask roles') 
       .setDMPermission(false)
-
+      .setDefaultMemberPermissions(PermissionFlagsBits.KickMembers | PermissionFlagsBits.BanMembers)
 }

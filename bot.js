@@ -73,6 +73,37 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+
+	if (interaction.commandName === 'emojis') {
+		if (interaction.options.getSubcommand() === 'rick') {
+			await interaction.reply({content : 'https://images-ext-2.discordapp.net/external/bx0PM8LGED63WkwYGr9tXFsnYxVgxdHqfP1wimjrsPg/https/c.tenor.com/yheo1GGu3FwAAAAd/rick-roll-rick-ashley.gif'})
+			
+		} else if (interaction.options.getSubcommand() === 'sharingan') {
+			await interaction.reply({content : 'https://c.tenor.com/d5Y4XuC2HF4AAAAC/itachi-naruti.gif'})
+		}
+	}
+});
+
+client.on('interactionCreate', async interaction => {
+	if (!interaction.isChatInputCommand()) return;
+
+	if (interaction.commandName === 'server') {
+		if (interaction.options.getSubcommand() === 'user') {
+			const user = interaction.options.getUser('user');
+
+			if (user) {
+				await interaction.reply(`Username: ${user.username}\nID: ${user.id}`);
+			} else {
+				await interaction.reply(`Your username: ${interaction.user.username}\nYour ID: ${interaction.user.id}`);
+			}
+		} else if (interaction.options.getSubcommand() === 'info') {
+			await interaction.reply(`Server name: ${interaction.guild.name}\nTotal members: ${interaction.guild.memberCount}`);
+		}
+	}
+});
+
 
 
 
