@@ -13,5 +13,5 @@ module.exports = {
         subcommand 
         .setName('user')
         .setDescription('User Information')
-        .addUserOption(option => option.setName('user').setDescription('Discord Mention')))
+        .addUserOption(Option => Option.setName('user').setDescription('User Name').setRequired(true)))
 }
