@@ -1,5 +1,5 @@
 // Require the necessary discord.js classes
-const { Client, GatewayIntentBits, EmbedBuilder, Embed, Colors } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder, Embed, Colors , ActivityType } = require('discord.js');
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js');
 const wait = require('node:timers/promises').setTimeout;
@@ -15,9 +15,10 @@ client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}`);
 	
     
-	client.user.setPresence({ activities: [{ name: `vikram code`, type: `WATCHING` }], status: 'dnd' })
-
-	
+	client.user.setPresence({
+		activities: [{ name: `vikram code`, type: ActivityType.Watching }],
+		status: 'dnd',
+	  });
 
 
 });
