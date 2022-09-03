@@ -15,13 +15,16 @@ client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}`);
 	
     
-    client.user.setPresence({
-        status: "online",  //You can show online, idle....
-        game: {
-            name: "Vikram Code",  //The message shown
+	client.user.setActivity({
+		status: "online",
+		game: {
+            name: "vikram code",  //The message shown
             type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
         }
     });
+
+	
+
 
 });
 
