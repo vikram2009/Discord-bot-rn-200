@@ -16,7 +16,7 @@ client.once('ready', () => {
 	
     
 	client.user.setPresence({
-		activities: [{ name: `vikram code`, type: ActivityType.Watching }],
+		activities: [{ name: `Discord`, type: ActivityType.Watching }],
 		status: 'dnd',
 	  });
 
