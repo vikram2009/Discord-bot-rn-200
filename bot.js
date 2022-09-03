@@ -15,12 +15,7 @@ client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}`);
 	
     
-	client.user.setActivity({
-		
-            name: "vikram code",  //The message shown
-            type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
-        
-    });
+	client.user.setPresence({ activities: [{ name: `vikram code`, type: `WATCHING` }], status: 'dnd' })
 
 	
 
