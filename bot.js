@@ -13,6 +13,16 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 client.once('ready', () => {
 	console.log(`Logged in as ${client.user.tag}`);
+	
+    
+    client.user.setPresence({
+        status: "online",  //You can show online, idle....
+        game: {
+            name: "Vikram Code",  //The message shown
+            type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
+        }
+    });
+
 });
 
 
