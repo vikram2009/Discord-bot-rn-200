@@ -16,7 +16,6 @@ client.once('ready', () => {
 	
     
 	client.user.setActivity({
-		status: "online",
 		game: {
             name: "vikram code",  //The message shown
             type: "WATCHING" //PLAYING: WATCHING: LISTENING: STREAMING:
