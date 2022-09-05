@@ -16,8 +16,8 @@ client.once('ready', () => {
 	
     
 	client.user.setPresence({
-		activities: [{ name: `Discord`, type: ActivityType.Watching }],
-		status: 'dnd',
+		activities: [{ name: `Discord`, type: ActivityType.Streaming}],
+		status: 'STREAMING',
 	  });
 
 
